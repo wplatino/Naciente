@@ -1,0 +1,335 @@
+/**
+ * Theme Name: Naciente
+ * Theme URI: http://laelite.info
+ * Description: L'Elite Base Theme
+ * Version: 1.0
+ * Author: L'Elite
+ * Author URI: http://laelite.info
+ */
+ // Colors
+ $black: rgba(0, 0, 0, 1.0);
+ $white: rgba(255, 255, 255, 1.0);
+ $trans-gray: rgba(100,100,100, 0.5);
+ $light-gray: rgba(251, 251, 251, 1.0);
+ $soft-gray: rgba(239, 239, 239, 1.0);
+ $clouds: rgba(236, 240, 241, 1.0);
+ $silver: rgba(189, 195, 199, 1.0);
+ $alizarin: rgba(231, 76, 60, 1.0);
+ $pomegranate: rgba(192, 57, 43, 1.0);
+ $amethyst: rgba(119, 33, 111, 1.0);
+ $wisteria: rgba(94, 39, 80, 1.0);
+ $light-blue: rgba(52, 152, 219,1.0);
+
+ html,
+ body,
+ .site-container {
+ 	display: block;
+ 	height: 100%;
+ 	overflow: hidden;
+ }
+ .site-surface {
+ 	position: absolute;
+ 	top: 0;
+	height: 100%;
+	width: 100%;
+ }
+ .site-content {
+ 	position: relative;
+	height: 100%;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+ }
+ header {
+ 	display: block;
+ 	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 30%;
+	height: 100%;
+	max-width: 500px;
+	background: $alizarin;
+	color: $light-gray;
+	text-shadow: 0 0 2px $pomegranate;
+	-webkit-text-shadow: 0 0 2px $pomegranate;
+	-o-text-shadow: 0 0 2px $pomegranate;
+ }
+ header .site-header {
+ 	background: transparent url('assets/images/8elite_logo.png') no-repeat top center;
+ 	height: 200px;
+ }
+ header .site-name a {
+ 	display: block;
+ 	padding: 200px 0 0 0;
+ 	font-size: 200%;
+ 	text-transform: uppercase;
+ 	text-decoration: none;
+ 	color: $pomegranate;
+ 	text-shadow: 0 0 1px $black;
+	-webkit-text-shadow: 0 0 1px $black;
+	-o-text-shadow: 0 0 1px $black;
+	transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+ }
+ header .site-name a:hover {
+ 	color: $black;
+ 	text-shadow: 0 0 1px $pomegranate;
+	-webkit-text-shadow: 0 0 1px $pomegranate;
+	-o-text-shadow: 0 0 1px $pomegranate;
+	transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+ }
+ header .footer {
+ 	display: block;
+ 	margin-top: 110%;
+ 	font-size: 80%;
+ 	color: $pomegranate;
+ 	text-shadow: 0 0 2px $alizarin;
+	-webkit-text-shadow: 0 0 2px $alizarin;
+	-o-text-shadow: 0 0 2px $alizarin;
+ }
+ .content {
+ 	outline: 0;
+	position: absolute;
+	left: 30%;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: $white;
+	-webkit-overflow-scrolling: touch;
+	overflow: auto;
+	border-left: 1px solid $pomegranate;
+ }
+ article.article {
+ 	padding: .5em;
+ }
+ article.article .article-title {
+ 	font-size: 120%;
+ }
+ article.article .article-title a {
+ 	text-decoration: none;
+ 	color: $black;
+ 	text-shadow: 0 0 1px $light-gray;
+	-webkit-text-shadow: 0 0 1px $light-gray;
+	-o-text-shadow: 0 0 1px $light-gray;
+ 	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+ }
+ article.article .article-title a:hover {
+ 	color: $alizarin;
+ 	text-shadow: 0 0 1px $white;
+	-webkit-text-shadow: 0 0 1px $white;
+	-o-text-shadow: 0 0 1px $white;
+ 	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+ }
+ article.article .article-content {
+ 	text-align: left;
+ 	margin: .5em 0;
+ 	letter-spacing: -0.5px;
+ 	border-top: 1px solid $light-gray;
+ }
+ article.article .article-content a {
+ 	text-decoration: none;
+ 	color: $black;
+ 	text-shadow: 0 0 1px $light-gray;
+	-webkit-text-shadow: 0 0 1px $light-gray;
+	-o-text-shadow: 0 0 1px $light-gray;
+ }
+ article.article .article-content a :after {
+ 	content: " »";
+ 	color: $white;
+ 	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+ }
+ article.article .article-content a:hover :after {
+ 	content: " »";
+ 	color: $alizarin;
+ 	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+ }
+ article.article .article-metadata {
+ 	font-size: 70%;
+ 	font-style: italic;
+ 	margin: -2.5em 0 0 0;
+ 	color: $silver;
+ }
+ article.article .article-metadata .category a {
+ 	text-decoration: none;
+ 	color: $black;
+ 	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+ }
+ article.article .article-metadata .category a:hover {
+ 	color: $alizarin;
+ 	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+ }
+ article.article .article-title,
+ article.article .article-content,
+ article.article .article-metadata {
+ 	margin-left: 110px;
+ }
+ article.article blockquote {
+ 	border-left: 5px solid $alizarin;
+ 	color: $pomegranate;
+ 	font-size: 105%;
+ 	font-style: italic;
+ 	text-shadow: 0 0 1px $light-gray;
+ 	padding: .5em .5em .1em .5em;
+ }
+ .single .date {
+ 	position: fixed;
+ }
+ .single .date .twitter a {
+ 	color: $pomegranate !important;
+ }
+ .single .article-media {
+ 	position: fixed;
+ 	margin: 8em 0 0 1.7em;
+ 	float: left;
+ 	text-align: center;
+ }
+ .single .article-media a {
+ 	text-decoration: none;
+ 	color: $alizarin;
+ }
+ .date {
+ 	margin: 1.5em 0 0 .5em;
+ 	float: left;
+ 	width: 90px;
+ 	height: 90px;
+ 	border-radius: 100%;
+ 	-webkit-border-radius: 100%;
+ 	background: $white;
+ 	box-shadow: inset 0 0 45px $clouds, 0 0 1px $trans-gray;
+ 	-webkit-box-shadow: inset 0 0 45px $clouds, 0 0 1px $trans-gray;
+ 	-o-box-shadow: inset 0 0 45px $clouds;
+ 	border-top-color: $white !important;
+ 	border-bottom-color: $silver !important;
+ 	text-align: center;
+ 	vertical-align: middle;
+ 	overflow: hidden;
+ 	transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+ }
+ .date * {
+ 	cursor: default;
+ }
+ .date:hover {
+ 	background: $alizarin;
+ 	box-shadow: inset 0 0 45px $pomegranate, 0 0 1px $trans-gray;
+ 	-webkit-box-shadow: inset 0 0 45px $pomegranate, 0 0 1px $trans-gray;
+ 	-o-box-shadow: inset 0 0 45px $pomegranate, 0 0 1px $trans-gray;
+ 	border-top-color: $alizarin !important;
+ 	border-bottom-color: $pomegranate !important;
+ 	transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+ }
+ .date:hover p {
+ 	color: $white;
+ 	transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+ }
+ .date:hover span.year {
+ 	color: $white;
+ 	text-shadow: 0 0 2px $alizarin;
+ 	-webkit-text-shadow: 0 0 2px $alizarin;
+ 	-o-text-shadow: 0 0 2px $alizarin;
+ 	transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+ }
+ .date p {
+ 	color: $silver;
+ 	transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+ }
+ .date span {
+ 	font-size: 80%;
+ 	line-height: 110%;
+ 	display: block;
+ }
+ .date span.month-day {
+ 	text-shadow: 0 0 2px $light-gray;
+ 	-webkit-text-shadow: 0 0 2px $light-gray;
+ 	-o-text-shadow: 0 0 2px $light-gray;
+ 	margin: 1.5em 0 0 0;
+ }
+ .date span.year {
+ 	margin: .5em 0 0 0;
+ 	font-size: 210%;
+ 	color: $alizarin;
+ 	text-shadow: 0 0 2px $light-gray;
+ 	-webkit-text-shadow: 0 0 2px $light-gray;
+ 	-o-text-shadow: 0 0 2px $light-gray;
+ 	transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+ }
+ #custom-tweet-button a {
+ 	display: block;
+ 	width: 50px;
+ 	height: 50px;
+    border-radius: 100%;
+ 	-webkit-border-radius: 100%;
+ 	text-indent: -9999999px;
+ 	box-shadow: inset 0 0 45px $clouds, 0 0 1px $trans-gray;
+ 	-webkit-box-shadow: inset 0 0 45px $clouds, 0 0 1px $trans-gray;
+ 	-o-box-shadow: inset 0 0 45px $clouds;
+ 	border-top-color: $white !important;
+ 	border-bottom-color: $silver !important;
+ 	text-align: center;
+ 	vertical-align: middle;
+    background: $white url('https://twitter.com/favicons/favicon.ico') center center no-repeat;
+    transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+  }
+  #custom-tweet-button a:hover {
+  	background: $white url('https://twitter.com/favicons/favicon.ico') center center no-repeat;
+ 	box-shadow: inset 0 0 45px $light-blue, 0 0 1px $trans-gray;
+ 	-webkit-box-shadow: inset 0 0 45px $light-blue, 0 0 1px $trans-gray;
+ 	-o-box-shadow: inset 0 0 45px $light-blue, 0 0 1px $trans-gray;
+ 	border-top-color: $light-blue !important;
+ 	border-bottom-color: $light-gray !important;
+ 	transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+  }
+  @media all and (max-width: 799px) {
+  	.site-surface,
+  	.site-content {
+  		position: relative;  		
+  	}
+  	header,
+  	article {
+  		float: none;
+  		display: block;
+  		width: 100%;
+  	}
+  	header {
+  		margin: 0;
+  		position: relative;
+  		height: 10%;
+  	}
+  	header .site-header {
+  		height: 10%;
+  	}
+  	header .site-name a {
+  		padding: 8% 0 0 0;
+  		font-size: 100%;
+  	}
+  }
