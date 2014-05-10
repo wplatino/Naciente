@@ -13,6 +13,7 @@
 
 		// Create button
 		App.commentsButton = document.createElement('button');
+		App.commentsButton.setAttribute('id', 'comments-button');
 		App.commentsButton.setAttribute('class', 'comments-button');
 		App.commentsButton.setAttribute('data-js', 'comments-button');
 		// Get Domain
@@ -36,6 +37,50 @@
 		}
 		// Append button to body
 		document.getElementById('article-comments').appendChild( App.commentsButton );
+
+		if( document.getElementById('comments-button') != null ) {
+
+			if( window.location.hash ) {
+				var getButton = document.getElementById('comments-button');
+				// Remove button on click
+				getButton.parentNode.removeChild(getButton);
+				// Create comments container
+				App.disqusContainer = document.createElement('div');
+				App.disqusContainer.setAttribute('id', 'disqus_thread');
+				// Append container to body
+				document.getElementById('article-comments').appendChild( App.disqusContainer );
+				// Get Domain
+				var myDomain = window.location.host;
+				switch( myDomain ) {
+					case '8elite.com':
+						// Disqus Shortname
+						App.disqus_shortname = '8elite';
+						break;
+					case 'es.8elite.com':
+						// Disqus Shortname
+						App.disqus_shortname = '8eliteenespanol';
+						break;
+					case 'en.8elite.com':
+						// Disqus Shortname
+						App.disqus_shortname = '8eliteinenglish';
+						break;
+					case 'fr.8elite.com':
+						// Disqus Shortname
+						App.disqus_shortname = '8eliteenfrancais';
+						break;
+					default:
+						// Disqus Shortname
+						App.disqus_shortname = '8elite';
+						break;
+				}
+				// Embed Disqus
+				var dsq = document.createElement('script');
+				dsq.type = 'text/javascript';
+				dsq.async = true;
+				dsq.src = '//' + App.disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			}
+		}
 
 		// Click event handler
 		App.commentsButton.onclick = function () {
